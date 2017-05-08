@@ -1,10 +1,10 @@
 {
   "name": "stopwatch-stream",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A streaming human readable stopwatch",
   "main": "index.js",
   "scripts": {
-     "test": "ava *.test.js"
+    "test": "ava *.test.js"
   },
   "repository": {
     "type": "git",
