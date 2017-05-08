@@ -1,6 +1,6 @@
 {
   "name": "stopwatch-stream",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "A streaming human readable stopwatch",
   "main": "index.js",
   "scripts": {
