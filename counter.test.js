@@ -81,3 +81,18 @@ test('Counter Reset', (t) => {
   t.is(counter.out(), '00:00:00', 'Expected 3-tier nested counter to look like 00:00:00 after reset');
 });
 
+
+test('Counter formats and delimieters', (t) => {
+  let counter = new Counter({
+    max: 999,
+    format: '000',
+    delimiter: '.',
+    counter: new Counter({
+      max: 59,
+      counter: new Counter()
+    })
+  });
+  
+
+  t.is(counter.out(), '00:00.000', 'Expect custom stopwatch format 00:00.000');
+});
