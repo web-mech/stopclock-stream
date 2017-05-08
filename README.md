@@ -2,6 +2,8 @@
 
 A streaming human readable stopwatch. 
 
+[![Build Status](https://travis-ci.org/web-mech/stopwatch-stream.svg?branch=master)](https://travis-ci.org/web-mech/stopwatch-stream)
+
 Exposes an RxJS [Observable](http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html)
 
 ## Default Format
