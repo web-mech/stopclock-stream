@@ -1,6 +1,8 @@
 const defaultOptions = {
   count: 0,
   seed: 0,
+  format: '00',
+  delimiter: ':',
   max: false,
   counter: undefined
 };
@@ -26,9 +28,9 @@ Counter.prototype.tick = function tick() {
 
 Counter.prototype.out = function out() {
   var o = ''+this.count;
-  var localOut = ('00'+o).substring(o.length);
+  var localOut = (this.format+o).substring(o.length);
   if (this.counter) {
-    return [ this.counter.out(), localOut ].join(':'); 
+    return [ this.counter.out(), localOut ].join(this.delimiter); 
   }
   return localOut;
 };
