@@ -3,7 +3,7 @@ import test from 'ava';
 import stopWatch from '.';
 
 test('Stopwatch', async (t) => {
-  var sw = stopWatch();
+  const sw = stopWatch();
   let time;
   sw.stream.subscribe((s) => {
     console.log(s);
@@ -27,7 +27,7 @@ test('Stopwatch', async (t) => {
 });
 
 test('Stopwatch format, also stopwatch current', (t) => {
-  var sw = stopWatch({
+  const sw = stopWatch({
     format: '000',
     delimiter: '.'
   });

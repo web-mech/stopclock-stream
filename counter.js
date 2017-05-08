@@ -8,7 +8,7 @@ const defaultOptions = {
 };
 
 function Counter(options) {
-  Object.assign(this, defaultOptions, options || {})
+  Object.assign(this, defaultOptions, options || {});
   
   while (!!~(--(this.seed))) {
    this.tick();
@@ -27,8 +27,8 @@ Counter.prototype.tick = function tick() {
 };
 
 Counter.prototype.out = function out() {
-  var o = ''+this.count;
-  var localOut = (this.format+o).substring(o.length);
+  let o = ''+this.count;
+  let localOut = (this.format+o).substring(o.length);
   if (this.counter) {
     return [ this.counter.out(), localOut ].join(this.delimiter); 
   }
