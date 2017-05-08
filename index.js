@@ -20,6 +20,7 @@ module.exports = function stopWatch(options) {
       options.complete = true;
     },
     reset() {
+      options.on = false;
       counter.reset();
     },
     stop() {
@@ -29,6 +30,7 @@ module.exports = function stopWatch(options) {
       options.on = true;
     },
     stream: Observable.create(function(observer) {
+      observer.next(counter.out());
       let i = setInterval(function() {
         if (options.on) {
           counter.tick();
