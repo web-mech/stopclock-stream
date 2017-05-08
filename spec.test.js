@@ -25,3 +25,11 @@ test('Stopwatch', async (t) => {
     }, 1999);
   })
 });
+
+test('Stopwatch format, also stopwatch current', (t) => {
+  var sw = stopWatch({
+    format: '000',
+    delimiter: '.'
+  });
+  t.is(sw.current(), '00:00.000', '.current is a thing now. And takes custom formats');
+});

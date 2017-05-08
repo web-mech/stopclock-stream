@@ -1,7 +1,9 @@
 const Counter = require('./counter');
 const { Observable } = require('rxjs');
 const defaultOptions = {
-  on: false
+  on: false,
+  format: '00',
+  delimiter: ':'
 };
 
 module.exports = function stopWatch(options) {
@@ -9,6 +11,8 @@ module.exports = function stopWatch(options) {
 
   let counter = new Counter({//milsecs
       max: 999,
+      format: options.format,
+      delimiter: options.delimiter,
       counter: new Counter({//sec
         max: 59,
         counter: new Counter()
@@ -16,6 +20,9 @@ module.exports = function stopWatch(options) {
   });
 
   return {
+    current() {
+      return counter.out();
+    },
     complete() {
       options.complete = true;
     },
