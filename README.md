@@ -1,2 +1,2 @@
-# stopclock-stream
-A streaming human readable stopclock
+# stopwatch-stream
+A streaming human readable stopwatch
